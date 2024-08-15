@@ -42,22 +42,6 @@ This trading bot is built using the Lumibot framework and Alpaca for trading ope
 - **Python 3.8+**
 - **Lumibot, Alpaca Account, Hugging Face Transformers, PyTorch**
 
-### Installation
-1. Clone the repository:
-   \`\`\`bash
-   git clone https://github.com/yourusername/trading_bot.git
-   \`\`\`
-2. Install dependencies:
-   \`\`\`bash
-   pip install -r requirements.txt
-   \`\`\`
-3. Set up Alpaca API credentials:
-   \`\`\`bash
-   export API_KEY=your_api_key
-   export API_SECRET=your_api_secret
-   export BASE_URL=https://paper-api.alpaca.markets/v2
-   \`\`\`
-
 ### Running the Bot
 - **Backtesting**: Run the script to test strategies.
 - **Live Trading**: Uncomment the relevant section for live trading.
