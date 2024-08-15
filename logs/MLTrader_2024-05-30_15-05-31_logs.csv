@@ -1,0 +1,47 @@
+2024-05-30 15:05:31,047: asyncio: INFO: [MLTrader] Executing the initialize lifecycle method
+2024-05-30 15:05:32,238: root: INFO: Current backtesting datetime 2023-12-26 08:30:00-05:00
+2024-05-30 15:05:32,240: asyncio: INFO: [MLTrader] Executing the before_market_opens lifecycle method
+2024-05-30 15:05:32,240: root: INFO: Current backtesting datetime 2023-12-26 09:30:00-05:00
+2024-05-30 15:05:32,240: asyncio: INFO: [MLTrader] Executing the before_starting_trading lifecycle method
+2024-05-30 15:05:32,241: asyncio: INFO: [MLTrader] [34mExecuting the on_trading_iteration lifecycle method at 2024-05-30 15:05:32[0m
+2024-05-30 15:05:32,241: root: WARNING: quote is not implemented for YahooData, but USD was passed as the quote
+2024-05-30 15:05:34,123: root: WARNING: quote is not implemented for YahooData, but USD was passed as the quote
+2024-05-30 15:05:35,488: asyncio: INFO: [MLTrader] [34mTrading iteration ended at 2024-05-30 15:05:35[0m
+2024-05-30 15:05:35,489: asyncio: INFO: [MLTrader] [34mSleeping for 86400 seconds[0m
+2024-05-30 15:05:35,490: root: INFO: Current backtesting datetime 2023-12-26 16:00:00-05:00
+2024-05-30 15:05:35,490: root: INFO: Current backtesting datetime 2023-12-27 09:30:00-05:00
+2024-05-30 15:05:35,490: asyncio: INFO: [MLTrader] [34mExecuting the on_trading_iteration lifecycle method at 2024-05-30 15:05:35[0m
+2024-05-30 15:05:35,490: root: WARNING: quote is not implemented for YahooData, but USD was passed as the quote
+2024-05-30 15:05:35,491: root: WARNING: quote is not implemented for YahooData, but USD was passed as the quote
+2024-05-30 15:05:35,934: asyncio: ERROR: [MLTrader] '>' not supported between instances of 'str' and 'float'
+2024-05-30 15:05:35,936: asyncio: ERROR: [MLTrader] Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/lumibot/strategies/strategy_executor.py", line 923, in run
+    self._run_trading_session()
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/lumibot/strategies/strategy_executor.py", line 871, in _run_trading_session
+    self._on_trading_iteration()
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/lumibot/strategies/strategy_executor.py", line 262, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/lumibot/strategies/strategy_executor.py", line 286, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/lumibot/strategies/strategy_executor.py", line 397, in _on_trading_iteration
+    raise e
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/lumibot/strategies/strategy_executor.py", line 369, in _on_trading_iteration
+    on_trading_iteration()
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/lumibot/tools/decorators.py", line 62, in func_output
+    frame, result = call_function_get_frame(func_input, *args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/lumibot/tools/decorators.py", line 30, in call_function_get_frame
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sreekargudipati/Coding Projects/AutoTrader/trading_bot.py", line 83, in on_trading_iteration
+    elif sentiment == "negative" and "probability" > .999 :
+                                     ^^^^^^^^^^^^^^^^^^^^
+TypeError: '>' not supported between instances of 'str' and 'float'
+
+2024-05-30 15:05:35,936: asyncio: INFO: [MLTrader] Executing the on_bot_crash event method
+2024-05-30 15:05:37,557: root: INFO: Backtesting finished
+2024-05-30 15:05:38,154: root: INFO: There were no trades in this backtest.
+2024-05-30 15:05:38,783: root: ERROR: Not enough data to create a tearsheet, at least 2 days of data are required. Skipping
+2024-05-30 15:05:38,783: backtest_stats: INFO: Backtest took 0:00:07.742678 for a speed of 0.000

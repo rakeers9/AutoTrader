@@ -1,0 +1,40 @@
+2024-05-30 11:25:29,572: asyncio: INFO: [MLTrader] Executing the initialize lifecycle method
+2024-05-30 11:25:30,305: root: INFO: Current backtesting datetime 2023-12-26 08:30:00-05:00
+2024-05-30 11:25:30,306: asyncio: INFO: [MLTrader] Executing the before_market_opens lifecycle method
+2024-05-30 11:25:30,307: root: INFO: Current backtesting datetime 2023-12-26 09:30:00-05:00
+2024-05-30 11:25:30,307: asyncio: INFO: [MLTrader] Executing the before_starting_trading lifecycle method
+2024-05-30 11:25:30,308: asyncio: INFO: [MLTrader] [34mExecuting the on_trading_iteration lifecycle method at 2024-05-30 11:25:30[0m
+2024-05-30 11:25:30,308: root: WARNING: quote is not implemented for YahooData, but USD was passed as the quote
+2024-05-30 11:25:33,303: root: WARNING: quote is not implemented for YahooData, but USD was passed as the quote
+2024-05-30 11:25:33,304: asyncio: ERROR: [MLTrader] 'MLTrader' object has no attribute 'get_sentiment_of_news'
+2024-05-30 11:25:33,307: asyncio: ERROR: [MLTrader] Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/lumibot/strategies/strategy_executor.py", line 923, in run
+    self._run_trading_session()
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/lumibot/strategies/strategy_executor.py", line 871, in _run_trading_session
+    self._on_trading_iteration()
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/lumibot/strategies/strategy_executor.py", line 262, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/lumibot/strategies/strategy_executor.py", line 286, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/lumibot/strategies/strategy_executor.py", line 397, in _on_trading_iteration
+    raise e
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/lumibot/strategies/strategy_executor.py", line 369, in _on_trading_iteration
+    on_trading_iteration()
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/lumibot/tools/decorators.py", line 62, in func_output
+    frame, result = call_function_get_frame(func_input, *args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/lumibot/tools/decorators.py", line 30, in call_function_get_frame
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sreekargudipati/Coding Projects/AutoTrader/trading_bot.py", line 64, in on_trading_iteration
+    probability, sentiment = self.get_sentiment_of_news()
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MLTrader' object has no attribute 'get_sentiment_of_news'
+
+2024-05-30 11:25:33,307: asyncio: INFO: [MLTrader] Executing the on_bot_crash event method
+2024-05-30 11:25:33,310: root: INFO: Backtesting finished
+2024-05-30 11:25:34,688: asyncio: WARNING: [MLTrader] Cannot plot returns because the strategy returns are missing
+2024-05-30 11:25:34,743: asyncio: WARNING: [MLTrader] Cannot create a tearsheet because the strategy returns are missing
+2024-05-30 11:25:34,743: backtest_stats: INFO: Backtest took 0:00:05.171625 for a speed of 0.000
